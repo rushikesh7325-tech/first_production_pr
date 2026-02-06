@@ -75,7 +75,7 @@ class M4InsightsScreen extends StatelessWidget {
                 height: 56,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/personalization');
+                    Navigator.pushNamed(context, '/m4processing');
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFFBDBDBD),

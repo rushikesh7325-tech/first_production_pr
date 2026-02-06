@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:firstproduction_pro/pages/physical_activity_screen.dart';
+import '../navigation/routes.dart';
 
 class SleepQualityScreen extends StatefulWidget {
   const SleepQualityScreen({super.key});
@@ -20,37 +19,38 @@ class _SleepQualityScreenState extends State<SleepQualityScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back_ios_new, color: Colors.black, size: 20),
           onPressed: () => Navigator.pop(context),
         ),
         centerTitle: true,
         title: const Text(
-          "Question 6 of 16",
-          style: TextStyle(color: Colors.grey),
+          "Step 6 of 16",
+          style: TextStyle(color: Colors.grey, fontSize: 14, fontWeight: FontWeight.w600),
         ),
       ),
-
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 30),
-
+            const SizedBox(height: 20),
             const Text(
               "On average, how many hours of sleep do you get per night?",
-              style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: 24, 
+                fontWeight: FontWeight.bold,
+                color: Color(0xFF1A1A1A),
+                height: 1.3,
+              ),
             ),
-
-            const SizedBox(height: 30),
-
+            const SizedBox(height: 24),
             Wrap(
-              spacing: 8,
+              spacing: 10,
+              runSpacing: 10,
               children: ["5", "6", "7", "8", "9+"].map((hour) {
                 return _optionChip(
                   label: hour,
@@ -59,20 +59,21 @@ class _SleepQualityScreenState extends State<SleepQualityScreen> {
                 );
               }).toList(),
             ),
-
-            const SizedBox(height: 50),
-
+            const SizedBox(height: 48),
             const Text(
               "How is the quality of your sleep?",
-              style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: 24, 
+                fontWeight: FontWeight.bold,
+                color: Color(0xFF1A1A1A),
+                height: 1.3,
+              ),
             ),
-
-            const SizedBox(height: 30),
-
+            const SizedBox(height: 24),
             Wrap(
-              spacing: 20,
-              runSpacing: 30,
-              children: ["Sound", "  Fair ", "Restless"].map((quality) {
+              spacing: 12,
+              runSpacing: 12,
+              children: ["Sound", "Fair", "Restless"].map((quality) {
                 return _optionChip(
                   label: quality,
                   isSelected: selectedQuality == quality,
@@ -80,12 +81,9 @@ class _SleepQualityScreenState extends State<SleepQualityScreen> {
                 );
               }).toList(),
             ),
-
             const Spacer(),
-
             _continueButton(),
-
-            const SizedBox(height: 30),
+            const SizedBox(height: 40),
           ],
         ),
       ),
@@ -95,27 +93,24 @@ class _SleepQualityScreenState extends State<SleepQualityScreen> {
   Widget _continueButton() {
     return SizedBox(
       width: double.infinity,
-      height: 55,
+      height: 60,
       child: ElevatedButton(
-        onPressed: isContinueEnabled ? () {
-
-          Navigator.pushNamed(context, '/physicalActivity');
-
-
-        } : null,
+        onPressed: isContinueEnabled 
+            ? () => Navigator.pushNamed(context, Routes.physicalActivity) 
+            : null,
         style: ElevatedButton.styleFrom(
-          backgroundColor:
-          isContinueEnabled ? Colors.black : Colors.grey.shade300,
-          shape:
-          RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+          backgroundColor: Colors.black,
+          disabledBackgroundColor: Colors.grey.shade200,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
           elevation: 0,
         ),
-        child: const Text(
+        child: Text(
           "CONTINUE",
           style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.w600,
-            letterSpacing: 1,
+            color: isContinueEnabled ? Colors.white : Colors.grey.shade500,
+            fontWeight: FontWeight.bold,
+            fontSize: 16,
+            letterSpacing: 1.2,
           ),
         ),
       ),
@@ -129,19 +124,23 @@ class _SleepQualityScreenState extends State<SleepQualityScreen> {
   }) {
     return GestureDetector(
       onTap: onTap,
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 26, vertical: 16),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 200),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
         decoration: BoxDecoration(
-          color: isSelected ? Colors.black : Colors.white,
-          borderRadius: BorderRadius.circular(30),
-          border: Border.all(color: Colors.black),
+          color: isSelected ? Colors.black : const Color(0xFFF5F5F7),
+          borderRadius: BorderRadius.circular(25),
+          border: Border.all(
+            color: isSelected ? Colors.black : Colors.transparent,
+            width: 1.5,
+          ),
         ),
         child: Text(
           label,
           style: TextStyle(
-            color: isSelected ? Colors.white : Colors.black,
-            fontSize: 16,
-            fontWeight: FontWeight.w600,
+            color: isSelected ? Colors.white : Colors.black87,
+            fontSize: 15,
+            fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
           ),
         ),
       ),
