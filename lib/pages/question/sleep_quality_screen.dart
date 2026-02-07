@@ -1,6 +1,6 @@
 import 'package:firstproduction_pro/backend/backend.dart';
 import 'package:flutter/material.dart';
-import '../navigation/routes.dart';
+import '../../navigation/routes.dart';
 
 class SleepQualityScreen extends StatefulWidget {
   final int questionid_6_1;

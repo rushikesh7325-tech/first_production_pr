@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../navigation/routes.dart';
+import '../../navigation/routes.dart';
 
 class ResetPasswordScreen extends StatefulWidget {
   const ResetPasswordScreen({super.key});

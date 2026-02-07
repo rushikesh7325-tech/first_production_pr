@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import '../navigation/routes.dart';
-import 'home_page_screen.dart';
-import 'assesment_page_screen.dart';
+import '../../navigation/routes.dart';
+import '../home_page_screen.dart';
+import '../question/assesment_page_screen.dart';
 
 class LoadingPage extends StatefulWidget {
   const LoadingPage({super.key});

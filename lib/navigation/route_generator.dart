@@ -3,39 +3,39 @@ import 'routes.dart';
 
 // Pages - Authentication & Verification
 import 'package:firstproduction_pro/pages/welcome_screen.dart';
-import 'package:firstproduction_pro/pages/signup_screen.dart';
-import 'package:firstproduction_pro/pages/set_password_screen.dart';
-import 'package:firstproduction_pro/pages/log_in_screen.dart';
-import 'package:firstproduction_pro/pages/reset_password_screen.dart';
-import 'package:firstproduction_pro/pages/company_verification_screen.dart';
-import 'package:firstproduction_pro/pages/university_verification_screen.dart';
-import 'package:firstproduction_pro/pages/uni_create_account_screen.dart';
-import 'package:firstproduction_pro/pages/create_company_account_screen.dart';
+import 'package:firstproduction_pro/pages/auth/signup_screen.dart';
+import 'package:firstproduction_pro/pages/auth/set_password_screen.dart';
+import 'package:firstproduction_pro/pages/auth/log_in_screen.dart';
+import 'package:firstproduction_pro/pages/auth/reset_password_screen.dart';
+import 'package:firstproduction_pro/pages/auth/company_verification_screen.dart';
+import 'package:firstproduction_pro/pages/auth/university_verification_screen.dart';
+import 'package:firstproduction_pro/pages/auth/uni_create_account_screen.dart';
+import 'package:firstproduction_pro/pages/auth/create_company_account_screen.dart';
 
 // Pages - Core App & Onboarding
-import 'package:firstproduction_pro/pages/Primary_goals.dart';
+import 'package:firstproduction_pro/pages/auth/Primary_goals.dart';
 import 'package:firstproduction_pro/pages/home_page_screen.dart';
-import 'package:firstproduction_pro/pages/Crafting_space.dart';
-import 'package:firstproduction_pro/pages/personalization_loading_screen.dart';
+import 'package:firstproduction_pro/pages/auth/Crafting_space.dart';
+import 'package:firstproduction_pro/pages/question/personalization_loading_screen.dart';
 
 // Pages - Assessment Journey
-import 'package:firstproduction_pro/pages/assesment_page_screen.dart';
-import 'package:firstproduction_pro/pages/m2_current_energy_and_mood_screen.dart';
-import 'package:firstproduction_pro/pages/reduce_anxiety_feelings_screen.dart';
-import 'package:firstproduction_pro/pages/overwhelmed_actions_screen.dart';
-import 'package:firstproduction_pro/pages/support_level_screen.dart';
-import 'package:firstproduction_pro/pages/sleep_quality_screen.dart';
-import 'package:firstproduction_pro/pages/physical_activity_screen.dart';
-import 'package:firstproduction_pro/pages/stress_sources_screen.dart';
-import 'package:firstproduction_pro/pages/stress_location_screen.dart';
-import 'package:firstproduction_pro/pages/stress_challenges_screen.dart';
-import 'package:firstproduction_pro/pages/learning_preference_screen.dart';
-import 'package:firstproduction_pro/pages/open_reflection_screen.dart';
-import 'package:firstproduction_pro/pages/do_you_currently_have_any_mindfulness_routines.dart';
-import 'package:firstproduction_pro/pages/weekly_commitment.dart';
+import 'package:firstproduction_pro/pages/question/assesment_page_screen.dart';
+import 'package:firstproduction_pro/pages/question/m2_current_energy_and_mood_screen.dart';
+import 'package:firstproduction_pro/pages/question/reduce_anxiety_feelings_screen.dart';
+import 'package:firstproduction_pro/pages/question/overwhelmed_actions_screen.dart';
+import 'package:firstproduction_pro/pages/question/support_level_screen.dart';
+import 'package:firstproduction_pro/pages/question/sleep_quality_screen.dart';
+import 'package:firstproduction_pro/pages/question/physical_activity_screen.dart';
+import 'package:firstproduction_pro/pages/question/stress_sources_screen.dart';
+import 'package:firstproduction_pro/pages/question/stress_location_screen.dart';
+import 'package:firstproduction_pro/pages/question/stress_challenges_screen.dart';
+import 'package:firstproduction_pro/pages/question/learning_preference_screen.dart';
+import 'package:firstproduction_pro/pages/question/open_reflection_screen.dart';
+import 'package:firstproduction_pro/pages/question/do_you_currently_have_any_mindfulness_routines.dart';
+import 'package:firstproduction_pro/pages/question/weekly_commitment.dart';
 
 // Pages - Results & Analysis
-import 'package:firstproduction_pro/pages/insights_review_screen.dart';
+import 'package:firstproduction_pro/pages/question/insights_review_screen.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 

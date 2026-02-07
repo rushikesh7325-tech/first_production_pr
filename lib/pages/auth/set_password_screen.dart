@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../navigation/routes.dart'; // Import your constants
+import '../../navigation/routes.dart'; // Import your constants
 
 class SetPasswordScreen extends StatefulWidget {
   const SetPasswordScreen({super.key});

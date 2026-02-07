@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../navigation/routes.dart'; // Import your constants
+import '../../navigation/routes.dart'; // Import your constants
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
